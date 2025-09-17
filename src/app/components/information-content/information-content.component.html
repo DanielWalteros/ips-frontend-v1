@@ -2,6 +2,7 @@
 <section class="main-content py-5" *ngIf="informationCard && informationCard.contentItems && informationCard.contentItems.length > 0">
   <div class="container">
     <div class="row align-items-center">
+
       <!-- Left Content Column -->
       <div class="col-lg-4 col-md-12">
         <div class="content-list left-content">
@@ -10,6 +11,7 @@
             *ngFor="let item of getLeftContentItems(); trackBy: trackByContentItem"
           >
             <div class="item-number">{{ item.number }}</div>
+            <div class="item-separator"></div>
             <div class="item-text">{{ item.text }}</div>
           </div>
         </div>
@@ -34,6 +36,7 @@
             *ngFor="let item of getRightContentItems(); trackBy: trackByContentItem"
           >
             <div class="item-number">{{ item.number }}</div>
+            <div class="item-separator"></div>
             <div class="item-text">{{ item.text }}</div>
           </div>
         </div>
