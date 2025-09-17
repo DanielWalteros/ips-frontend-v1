@@ -1,0 +1,52 @@
+<!-- Policy Content Section -->
+<div class="policy-content-section py-5" *ngIf="policy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="policy-content">
+          <!-- Content Title -->
+          <h2 class="content-title mb-4">{{ policy.contentTitle }}</h2>
+
+          <!-- Content Description -->
+          <p class="content-description mb-4">{{ policy.contentDescription }}</p>
+
+          <!-- Content Intro Text -->
+          <p class="content-intro-text mb-4">{{ policy.contentIntroText }}</p>
+
+          <!-- Content Items (Conditional Style) -->
+          <div class="content-items">
+            <!-- Traditional List Style (only for patient safety policy) -->
+            <ul *ngIf="policy.listStyle === 'traditional'" class="content-list">
+              <li class="content-item-list mb-3"
+                *ngFor="let item of policy.contentItems; trackBy: trackByContentItemId">
+                <h4 *ngIf="item.title" class="item-title mb-1">{{ item.title }}</h4>
+                <p *ngIf="item.description" class="item-description mb-0">{{ item.description }}</p>
+              </li>
+            </ul>
+            
+            <!-- Checkmarks Style (default for all other policies) -->
+            <div *ngIf="policy.listStyle !== 'traditional'" class="content-items-checkmarks">
+              <div class="content-item d-flex align-items-start mb-4"
+                *ngFor="let item of policy.contentItems; trackBy: trackByContentItemId">
+                <div class="checkmark-container me-3 flex-shrink-0">
+                  <div class="checkmark">
+                    <img
+                      src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                      alt=""
+                      data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                      data-src-mobile-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                      srcset="">
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h4 *ngIf="item.title" class="item-title mb-2">{{ item.title }}</h4>
+                  <p *ngIf="item.description" class="item-description mb-0">{{ item.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

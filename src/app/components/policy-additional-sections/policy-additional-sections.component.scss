@@ -1,0 +1,59 @@
+// Additional sections styles
+.additional-sections {
+  background-color: #f8f9fa;
+
+  .section-intro-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #495057;
+    font-weight: 500;
+  }
+
+  .content-items {
+    .content-item {
+      .checkmark-container {
+        margin-top: 2px;
+        
+        .checkmark {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      
+      .item-content {
+        .item-title {
+          color: black;
+          font-size: 1.25rem;
+          font-weight: 600;
+          line-height: 1.4;
+          
+          @media (max-width: 768px) {
+            font-size: 1.125rem;
+          }
+          
+          @media (max-width: 576px) {
+            font-size: 1rem;
+          }
+        }
+        
+        .item-description {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #495057;
+          
+          @media (max-width: 576px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

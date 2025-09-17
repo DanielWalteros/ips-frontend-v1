@@ -1,0 +1,23 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-nav">
+  <div class="container pt-4 pb-2" *ngIf="breadcrumbConfig && breadcrumbConfig.items.length > 0">
+    <div class="row">
+      <div class="col-12">
+        <nav [attr.aria-label]="breadcrumbConfig.ariaLabel || 'breadcrumb'">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item" [class.active]="item.isActive"
+              *ngFor="let item of breadcrumbConfig.items; trackBy: trackByItemLabel"
+              [attr.aria-current]="item.isActive ? 'page' : null">
+              <a *ngIf="!item.isActive && item.routerLink" [routerLink]="item.routerLink" class="text-decoration-none">
+                {{ item.label }}
+              </a>
+              <span *ngIf="item.isActive || !item.routerLink">
+                {{ item.label }}
+              </span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

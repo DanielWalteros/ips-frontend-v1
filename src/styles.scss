@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Font Awesome (CDN alternative)
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+// Variables globales para Salud Bolívar IPS
+:root {
+  // Colores oficiales Salud Bolívar (Verde institucional)
+  --sb-primary-green: #2c5234;
+  --sb-secondary-green: #1a3d20;
+  --sb-light-green: #3a6b42;
+  
+  // Colores alternativos (Azul)
+  --sb-primary-blue: #0D47A1;
+  --sb-secondary-blue: #1976D2;
+  --sb-accent-green: #4CAF50;
+  
+  // Colores neutros
+  --sb-text-dark: #212529;
+  --sb-text-light: #6C757D;
+  --sb-background: #FFFFFF;
+  --sb-gray-light: #F8F9FA;
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif; 
+}
+
+// Estilos base para Salud Bolívar IPS
+
+// Botones con verde institucional (principal)
+.btn-sb-primary {
+  background-color: var(--sb-primary-blue);
+  border-color: var(--sb-primary-blue);
+  color: white;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: var(--sb-secondary-blue);
+    border-color: var(--sb-secondary-blue);
+    color: white;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 71, 161, 0.25);
+  }
+}
+
+// Botones outline con verde institucional
+.btn-outline-sb-primary {
+  color: var(--sb-primary-blue);
+  border-color: var(--sb-primary-blue);
+  background-color: transparent;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: var(--sb-primary-blue);
+    border-color: var(--sb-primary-blue);
+    color: white;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 71, 161, 0.25);
+  }
+}
+
+// Botones alternativos (azul)
+.btn-sb-blue {
+  background-color: var(--sb-primary-blue);
+  border-color: var(--sb-primary-blue);
+  color: white;
+  
+  &:hover {
+    background-color: var(--sb-secondary-blue);
+    border-color: var(--sb-secondary-blue);
+  }
+}
+
+.btn-sb-accent {
+  background-color: var(--sb-accent-green);
+  border-color: var(--sb-accent-green);
+  color: white;
+  
+  &:hover {
+    background-color: #45A049;
+    border-color: #45A049;
+  }
+}
+
+// Colores de texto
+.text-sb-primary {
+  color: var(--sb-primary-green) !important;
+}
+
+.text-sb-blue {
+  color: var(--sb-primary-blue) !important;
+}
+
+.bg-sb-light {
+  background-color: var(--sb-gray-light) !important;
+}

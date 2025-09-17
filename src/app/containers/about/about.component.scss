@@ -1,0 +1,22 @@
+// About Component Styles - Coordinador de Secciones
+// 
+// Este archivo solo contiene estilos generales para el componente coordinador.
+// Los estilos específicos de cada sección están en sus respectivos componentes:
+// - hero-section.component.scss
+// - about-us-section.component.scss  
+// - mission-vision-section.component.scss
+// - principles-values-section.component.scss
+// - institutional-policies-section.component.scss
+// - transparency-section.component.scss
+// - epidemiological-section.component.scss
+// - financial-reports-section.component.scss (shared)
+
+// Estilos generales del componente About
+.about-component {
+  // Solo estilos que aplican a todo el componente coordinador
+  // Actualmente no hay estilos específicos necesarios ya que
+  // cada sección maneja su propia presentación
+}
+
+// Cualquier override global específico del About component iría aquí
+// (actualmente no necesario)

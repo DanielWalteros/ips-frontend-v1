@@ -1,0 +1,63 @@
+.client-logo {
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    
+    &:focus {
+      outline: 2px solid #2c5234;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+  
+  .client-logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: filter 0.3s ease;
+    
+    &:hover {
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+    }
+  }
+}
+
+// Responsive adjustments for client logo
+@media (max-width: 991.98px) {
+  .client-logo {
+    padding: 1.5rem 0.5rem;
+    
+    .client-logo-img {
+      max-height: 100px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .client-logo {
+    padding: 1rem 0;
+    
+    .client-logo-img {
+      max-height: 80px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .client-logo {
+    padding: 0.75rem 0;
+    
+    .client-logo-img {
+      max-height: 70px;
+    }
+  }
+}

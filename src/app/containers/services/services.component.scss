@@ -1,0 +1,11 @@
+// Services Component - Contenedor principal
+// Los estilos específicos de cada sección ahora están en sus componentes respectivos:
+// - ServicesHeroComponent: sections/services-hero/services-hero.component.scss
+// - ServicesOverviewComponent: sections/services-overview/services-overview.component.scss  
+// - VaccinationSectionComponent: sections/vaccination-section/vaccination-section.component.scss
+// - LocationDetailComponent: shared/location-detail/location-detail.component.scss
+
+// Solo mantenemos estilos globales del contenedor si son necesarios
+.services-container {
+  // Estilos del contenedor principal si se necesitan
+}

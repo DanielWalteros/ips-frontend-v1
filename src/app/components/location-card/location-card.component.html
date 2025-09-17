@@ -1,0 +1,20 @@
+<div class="location-card-new h-100">
+  <div class="location-image-container">
+    <img [src]="location.imageUrl" 
+         [alt]="location.name" 
+         class="location-image">
+  </div>
+  <div class="location-content">
+    <h4 class="location-title">{{ location.name }}</h4>
+    <p class="location-address" [innerHTML]="location.fullAddress"></p>
+    
+    <div class="location-schedule">
+      <p class="schedule-title">Horario de atención:</p>
+      <p class="schedule-item"><strong>Lun. a vnes.:</strong> {{ location.schedule.weekdays }}</p>
+      <p class="schedule-item"><strong>Sábados:</strong> {{ location.schedule.saturday }}</p>
+      <p class="schedule-item"><strong>Domingos:</strong> {{ location.schedule.sunday || 'Cerrado' }}</p>
+    </div>
+    
+    <a routerLink="/nuestros-servicios" class="btn location-btn">Conocer servicios</a>
+  </div>
+</div>

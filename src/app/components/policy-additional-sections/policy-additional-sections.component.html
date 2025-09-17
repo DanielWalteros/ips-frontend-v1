@@ -1,0 +1,34 @@
+<!-- Additional Content Sections (for complex policies) -->
+<div *ngIf="policy && policy.contentSections" class="additional-sections">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div *ngFor="let section of policy.contentSections; trackBy: trackByContentSectionId" class="content-section mb-5">
+          <!-- Section Intro Text -->
+          <p *ngIf="section.introText" class="section-intro-text mb-4">{{ section.introText }}</p>
+          
+          <!-- Section Items -->
+          <div class="content-items">
+            <div class="content-item d-flex align-items-start mb-4"
+              *ngFor="let item of section.items; trackBy: trackByContentItemId">
+              <div class="checkmark-container me-3 flex-shrink-0">
+                <div class="checkmark">
+                  <img
+                    src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                    alt=""
+                    data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                    data-src-mobile-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/politica-de-calidad/2c56bc20-horizons-icon.svg"
+                    srcset="">
+                </div>
+              </div>
+              <div class="item-content">
+                <h4 *ngIf="item.title" class="item-title mb-2">{{ item.title }}</h4>
+                <p *ngIf="item.description" class="item-description mb-0">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

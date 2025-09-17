@@ -1,0 +1,125 @@
+// Welcome Section
+.welcome-section {
+  background: linear-gradient(135deg, #2c5234 0%, #1e3d26 100%);
+  color: #ffffff;
+  min-height: 400px;
+  
+  .welcome-content {
+    .welcome-title {
+      color: #ffc107;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .welcome-description {
+    .welcome-text {
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .welcome-btn {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      border: none;
+      color: #212529;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+
+      &:hover {
+        background: linear-gradient(135deg, #ffb300 0%, #ff9800 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+        color: #212529;
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 991.98px) {
+  .welcome-section {
+    .welcome-content {
+      text-align: center;
+      margin-bottom: 2rem;
+      
+      .welcome-title {
+        font-size: 2.8rem;
+      }
+    }
+    
+    .welcome-description {
+      text-align: center;
+      
+      .welcome-text {
+        font-size: 1.1rem;
+      }
+      
+      .welcome-btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .welcome-section {
+    .welcome-content {
+      .welcome-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .welcome-description {
+      .welcome-text {
+        font-size: 1rem;
+      }
+      
+      .welcome-btn {
+        font-size: 0.95rem;
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .welcome-section {
+    .welcome-content {
+      .welcome-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+      }
+    }
+    
+    .welcome-description {
+      .welcome-text {
+        font-size: 0.95rem;
+      }
+      
+      .welcome-btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  }
+}

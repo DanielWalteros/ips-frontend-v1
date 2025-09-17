@@ -1,0 +1,173 @@
+<!-- Location Services Section -->
+<section class="location-services py-5 bg-light" *ngIf="location">
+  <div class="container">
+    <!-- Title (optional) -->
+    <div class="row" *ngIf="showTitle">
+      <div class="col-12 text-center mb-5">
+        <h2 class="location-title text-success mb-4">{{ location.name }}</h2>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Consultas -->
+      <div class="col-lg-4">
+        <div class="service-card bg-white rounded shadow-sm p-4 h-100">
+          <div class="service-header text-center mb-4">
+            <div class="service-icon mb-3">
+              <img
+                src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/8389a06c-medico.svg"
+                alt=""
+                data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/8389a06c-medico.svg"
+                data-src-mobile-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/8389a06c-medico.svg"
+                srcset="">
+            </div>
+            <h5 class="service-title">Consultas</h5>
+          </div>
+          <ul class="service-list list-unstyled">
+            <li class="mb-2" *ngFor="let consultation of location.detailedServices?.consultations">
+              <i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i>{{ consultation }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Otros servicios -->
+      <div class="col-lg-4">
+        <div class="service-card bg-white rounded shadow-sm p-4 h-100">
+          <div class="service-header text-center mb-4">
+            <div class="service-icon mb-3">
+              <img src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_101j01j000000000000028.png" 
+              alt="" 
+              data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_101j01j000000000000028.png" 
+              data-src-desktop-2x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1032032000000000000028.png" 
+              data-src-desktop-3x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1000000000000000000028.png" 
+              data-src-mobile-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_101j01j000000000000028.png" 
+              data-src-mobile-2x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1032032000000000000028.png" 
+              data-src-mobile-3x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1000000000000000000028.png" 
+              srcset="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_101j01j000000000000028.png 1x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1032032000000000000028.png 2x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/5e84e422-diagnostico-2_1000000000000000000028.png 3x">
+            </div>
+            <h5 class="service-title">Otros servicios</h5>
+          </div>
+          <ul class="service-list list-unstyled mb-4">
+            <li class="mb-2" *ngFor="let service of location.detailedServices?.otherServices">
+              <i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i>{{ service }}
+            </li>
+          </ul>
+          
+          <div class="new-services" *ngIf="location.detailedServices?.newServices?.length">
+            <h6 class="text-primary mb-3">Nuevos servicios</h6>
+            <ul class="service-list list-unstyled">
+              <li class="mb-2" *ngFor="let newService of location.detailedServices?.newServices">
+                <i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i>{{ newService }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agendamiento de citas -->
+      <div class="col-lg-4">
+        <div class="service-card bg-white rounded shadow-sm p-4 h-100 d-flex flex-column">
+          <div class="service-header text-center mb-4">
+            <div class="service-icon mb-3">
+              <img src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_101j01j000000000000028.png" 
+              alt="" 
+              data-src-desktop-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_101j01j000000000000028.png" 
+              data-src-desktop-2x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_1032032000000000000028.png" 
+              data-src-desktop-3x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_104l04l000000000000028.png" 
+              data-src-mobile-1x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_101j01j000000000000028.png" 
+              data-src-mobile-2x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_1032032000000000000028.png" 
+              data-src-mobile-3x="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_104l04l000000000000028.png" 
+              srcset="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_101j01j000000000000028.png 1x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_1032032000000000000028.png 2x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/nuestros-servicios/6a0a19c8-cita-medica-2_104l04l000000000000028.png 3x">
+            </div>
+            <h5 class="service-title">Agendamiento de citas</h5>
+          </div>
+          <div class="appointment-info flex-grow-1">
+            <div class="mb-4">
+              <p class="mb-2">Si desea hacerlo por chat, escríbanos a nuestro <strong>WhatsApp</strong>: <a href="https://wa.me/573223322322" target="_blank" class="text-success">322 332 2322</a></p>
+            </div>
+            <div class="mb-4">
+              <p class="mb-2">Desde el <strong>{{ location.contact.phone }}</strong> marcando las opciones 1-1-4-1.</p>
+            </div>
+            <div class="mb-4">
+              <p class="mb-2">O, acercándose <strong>personalmente</strong> a la sede de su preferencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Secciones adicionales dinámicas -->
+    <div class="row g-4 mt-3" *ngIf="location.detailedServices?.additionalSections?.length">
+      <div class="col-lg-4 col-md-6" *ngFor="let section of location.detailedServices?.additionalSections">
+        <div class="service-card bg-white rounded shadow-sm p-4 h-100 position-relative">
+          <div class="service-header text-center mb-4">
+            <span *ngIf="section.isNew" class="badge badge-new position-absolute">Nuevo</span>
+            <h5 class="service-title">{{ section.title }}</h5>
+          </div>
+          <ul class="service-list list-unstyled">
+            <li class="mb-2" *ngFor="let service of section.services">
+              <i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i>{{ service }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Location Info Section -->
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <!-- Map -->
+        <div class="location-map bg-white rounded shadow-sm p-3">
+          <div class="map-container">
+            <iframe 
+              [src]="mapUrl"
+              width="100%" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="location-details bg-white rounded shadow-sm p-4 h-100">
+          <!-- Ubicación -->
+          <div class="location-section mb-4">
+            <h5 class="section-title text-dark mb-3">Ubicación</h5>
+            <div class="location-info">
+              <p class="mb-1"><strong>{{ location.address }}</strong></p>
+              <p class="mb-1 text-muted" *ngIf="location.building">{{ location.building }}</p>
+              <p class="mb-0 text-muted" *ngIf="location.floor || location.office">
+                {{ location.floor }}{{ location.office ? ' - ' + location.office : '' }}
+              </p>
+            </div>
+          </div>
+          
+          <!-- Horarios de atención -->
+          <div class="schedule-section">
+            <h5 class="section-title text-dark mb-3">Horarios de atención</h5>
+            <div class="schedule-info">
+              <div class="schedule-item d-flex justify-content-between mb-2">
+                <span class="schedule-label"><strong>Lun - vier:</strong></span>
+                <span class="schedule-time">{{ location.schedule.weekdays }}</span>
+              </div>
+              <div class="schedule-item d-flex justify-content-between mb-2">
+                <span class="schedule-label"><strong>Sábados:</strong></span>
+                <span class="schedule-time">{{ location.schedule.saturday }}</span>
+              </div>
+              <div class="schedule-item d-flex justify-content-between">
+                <span class="schedule-label"><strong>Domingos:</strong></span>
+                <span class="schedule-time" [class.text-muted]="location.schedule.sunday === 'Cerrado'">
+                  {{ location.schedule.sunday || 'Cerrado' }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<div class="channel-card text-center p-4 h-100">
+  <div class="channel-icon mb-3">
+    <img
+      [src]="channel.iconUrl"
+      alt=""
+      [attr.data-src-desktop-1x]="channel.iconDataSrcDesktop1x"
+      [attr.data-src-desktop-2x]="channel.iconDataSrcDesktop2x"
+      [attr.data-src-desktop-3x]="channel.iconDataSrcDesktop3x"
+      [attr.data-src-mobile-1x]="channel.iconDataSrcMobile1x"
+      [attr.data-src-mobile-2x]="channel.iconDataSrcMobile2x"
+      [attr.data-src-mobile-3x]="channel.iconDataSrcMobile3x"
+      [attr.srcset]="channel.iconSrcSet">
+  </div>
+  
+  <h5 class="channel-title mb-3">{{ channel.title }}</h5>
+  
+  <p class="channel-description mb-2" [innerHTML]="getFormattedDescription()"></p>
+</div>

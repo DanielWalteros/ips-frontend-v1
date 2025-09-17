@@ -1,0 +1,117 @@
+.financial-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(44, 82, 52, 0.15);
+    border-color: #2c5234;
+  }
+  
+  .pdf-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 60px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  &:hover .pdf-icon img {
+    transform: scale(1.1);
+  }
+  
+  .financial-card-title {
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    
+    a {
+      color: #2c5234;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #1a3d20;
+        text-decoration: underline;
+      }
+      
+      &:focus {
+        outline: 2px solid #2c5234;
+        outline-offset: 2px;
+      }
+      
+      &.disabled {
+        color: #6c757d;
+        cursor: not-allowed;
+        text-decoration: none;
+        
+        &:hover {
+          color: #6c757d;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments for financial report card
+@media (max-width: 991.98px) {
+  .financial-card {
+    .pdf-icon img {
+      max-width: 50px;
+    }
+    
+    .financial-card-title {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .financial-card {
+    padding: 1.5rem !important;
+    
+    .pdf-icon {
+      margin-bottom: 1rem !important;
+      
+      img {
+        max-width: 45px;
+      }
+    }
+    
+    .financial-card-title {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .financial-card {
+    padding: 1rem !important;
+    
+    .pdf-icon {
+      margin-bottom: 0.75rem !important;
+      
+      img {
+        max-width: 40px;
+      }
+    }
+    
+    .financial-card-title {
+      font-size: 0.85rem;
+    }
+  }
+}

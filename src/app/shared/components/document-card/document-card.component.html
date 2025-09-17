@@ -1,0 +1,15 @@
+<div class="financial-card text-center p-4 h-100">
+  <div class="pdf-icon mb-3">
+    <img src="https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/f8f17a54-3f8eef7e-documentopdf.svg" 
+         alt="PDF" 
+         class="img-fluid">
+  </div>
+  <h6 class="financial-card-title">
+    <a [href]="document.downloadUrl || '#'" 
+       [target]="document.isAvailable ? '_blank' : '_self'"
+       [class.disabled]="!document.isAvailable"
+       class="text-decoration-underline">
+      {{ document.title }}
+    </a>
+  </h6>
+</div>

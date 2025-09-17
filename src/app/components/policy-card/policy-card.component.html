@@ -1,0 +1,13 @@
+<div class="policy-card h-100 text-center p-4">
+  <div class="policy-icon-container mb-3">
+    <img
+      [src]="policy.imageUrl"
+      [alt]="policy.imageAlt || ''"
+      [attr.data-src-desktop-1x]="policy.dataSrcDesktop1x"
+      [attr.data-src-mobile-1x]="policy.dataSrcMobile1x"
+      srcset="">
+  </div>
+  <h3 class="policy-title text-decoration-underline" [routerLink]="policy.routerLink">
+    {{ policy.title }}
+  </h3>
+</div>

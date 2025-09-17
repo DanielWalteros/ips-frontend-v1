@@ -1,0 +1,21 @@
+<!-- Hero Section -->
+<div class="policy-hero" *ngIf="policy"
+  [style.background-image]="'url(' + policy.heroBackgroundImage + ')'">
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="hero-content">
+            <h1 class="hero-title">{{ policy.heroTitle }}</h1>
+            <p class="hero-subtitle" *ngIf="policy.subtitle">{{ policy.subtitle }}</p>
+            <div class="policy-meta">
+              <span class="policy-code">
+                Código {{ policy.code }} | Versión {{ policy.version }} | Revisión {{ policy.revisionDate }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

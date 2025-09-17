@@ -1,0 +1,126 @@
+<!-- Footer de Salud Bolívar IPS -->
+<footer class="footer text-light">
+  <div class="container py-5">
+    <div class="row">
+      <!-- Logo Vertical -->
+      <div class="col-lg-2 col-md-3 mb-4 d-flex justify-content-center align-items-start">
+        <div class="vertical-logo">
+          <img src="//d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/ae71e117-vigilado-supersalud-02-1.svg"
+            alt="Vigilado Supersalud"
+            data-src-desktop-1x="//d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/ae71e117-vigilado-supersalud-02-1.svg"
+            data-src-mobile-1x="//d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/ae71e117-vigilado-supersalud-02-1.svg"
+            title="Logotipo" srcset="">
+        </div>
+      </div>
+
+      <!-- Canales de Comunicación -->
+      <div class="col-lg-3 col-md-4 mb-4">
+        <h5 class="text-sb-accent mb-4">CANALES DE COMUNICACIÓN</h5>
+
+        <!-- Teléfono -->
+        <div class="contact-item mb-3">
+          <p class="mb-1"><strong>Teléfono: #322</strong></p>
+          <p class="small mb-0">Opción 1-1-4-1 para comunicarse con un agente.</p>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="contact-item mb-3">
+          <p class="mb-1">
+            <strong>
+              <a href="https://wa.me/573223322322" target="_blank" class="text-white text-decoration-underline">
+                WhatsApp 322 332 2322
+              </a>
+            </strong>
+          </p>
+        </div>
+
+        <!-- Email PQRS -->
+        <div class="contact-item mb-3">
+          <p class="mb-1"><strong>Radicación de PQRS</strong></p>
+          <p class="small mb-0">
+            <a href="mailto:experienciadeservicioips@saludbolivar.com" class="text-white text-decoration-underline">
+              experienciadeservicioips&#64;saludbolivar.com
+            </a>
+          </p>
+          <p class="small mb-0">Buzón de sugerencia en las unidades de atención.</p>
+        </div>
+
+        <!-- Notificaciones Judiciales -->
+        <div class="contact-item">
+          <p class="mb-1"><strong>Notificaciones judiciales</strong></p>
+          <p class="small mb-0">
+            <a href="mailto:notificacionesips@saludbolivar.com" class="text-white text-decoration-underline">
+              notificacionesips&#64;saludbolivar.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Unidades de Atención Médica -->
+      <div class="col-lg-4 col-md-5 mb-4">
+        <h5 class="text-sb-accent mb-4">UNIDADES DE ATENCIÓN MÉDICA</h5>
+
+        <ng-container *ngFor="let location of locations; let last = last">
+          <app-medical-unit-item [location]="location" [displayName]="getDisplayName(location)"
+            [formattedSchedule]="getFormattedSchedule(location)" [class.mb-3]="!last">
+          </app-medical-unit-item>
+        </ng-container>
+      </div>
+
+      <!-- Salud Bolívar IPS -->
+      <div class="col-lg-3 col-md-12 mb-4">
+        <h5 class="text-sb-accent mb-4">SALUD BOLÍVAR IPS</h5>
+
+        <div class="ips-links">
+          <p class="mb-2" *ngFor="let link of ipsInternalLinks">
+            <a [routerLink]="link.routerLink" class="text-white text-decoration-underline">
+              <strong>{{ link.text }}</strong>
+            </a>
+          </p>
+        </div>
+
+        <h5 class="text-sb-accent">
+          CONSULTA
+        </h5>
+        <div class="ips-links">
+          <p *ngFor="let link of consultationLinks; let last = last" [class.mb-2]="!last" [class.mb-0]="last">
+            <a [href]="link.href" [target]="link.target" class="text-white text-decoration-underline">
+              <strong>{{ link.text }}</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accesibilidad -->
+    <div class="row border-top pt-4 mt-4">
+      <div class="col-12 text-center">
+        <p class="small mb-3">
+          Aquí podrá descargar gratuitamente los programas de MinTic:
+          <ng-container *ngFor="let link of accessibilityLinks; let last = last">
+            <a [href]="link.href" [target]="link.target" class="text-white text-decoration-underline">{{ link.text }}</a><span *ngIf="!last"> y </span>
+          </ng-container>
+          para que las personas con discapacidad tengan acceso a los contenidos de nuestro portal.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="bg-darker py-3">
+    <div class="container">
+      <div class="text-center">
+        <p class="mb-0 small">
+          © 2024 Salud Bolívar IPS S.A.S. - Todos los derechos reservados
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante Agendar Cita -->
+  <div class="floating-cta">
+    <a href="https://api.whatsapp.com/send?phone=573223322322" target="_blank" class="btn-agendar">
+      Agendar cita
+    </a>
+  </div>
+</footer>

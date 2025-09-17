@@ -1,0 +1,28 @@
+<!-- Información Relevante Section -->
+<section class="information-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title">Información relevante</h2>
+        <p class="section-subtitle text-muted">
+          Todos los usuarios deben tener en cuenta esta información para hacer un buen uso de su IPS.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let card of informationCards">
+        <a class="information-card" 
+           [style.background-image]="'url(' + card.cardImage + ')'"
+           [attr.data-card-id]="card.id"
+           [routerLink]="card.routerLink">
+          <div class="card-overlay">
+            <div class="card-content">
+              <h3 class="card-title">{{ card.title }}</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

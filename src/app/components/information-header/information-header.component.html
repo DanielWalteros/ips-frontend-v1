@@ -1,0 +1,23 @@
+<!-- Information Header Section -->
+<section 
+  class="information-header py-5"
+  [ngClass]="{ 'with-background': shouldUseBackgroundInHeader() }"
+  [style.background-image]="shouldUseBackgroundInHeader() ? 'url(' + informationCard.backgroundImage + ')' : null"
+  *ngIf="informationCard"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="header-content">
+        <h1 class="header-title">
+          {{ informationCard.detailTitle || informationCard.title }}
+        </h1>
+        <div class="header-intro" *ngIf="informationCard.detailDescription">
+          <p>{{ informationCard.detailDescription }}</p>
+        </div>
+        <div class="header-intro" *ngIf="informationCard.detailContent">
+          <p>{{ informationCard.detailContent }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

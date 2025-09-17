@@ -1,0 +1,43 @@
+<!-- Content Section -->
+<section class="main-content py-5" *ngIf="informationCard && informationCard.contentItems && informationCard.contentItems.length > 0">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content Column -->
+      <div class="col-lg-4 col-md-12">
+        <div class="content-list left-content">
+          <div 
+            class="content-item" 
+            *ngFor="let item of getLeftContentItems(); trackBy: trackByContentItem"
+          >
+            <div class="item-number">{{ item.number }}</div>
+            <div class="item-text">{{ item.text }}</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Center Image Column -->
+      <div class="col-lg-4 col-md-12">
+        <div class="content-image">
+          <img 
+            [src]="informationCard.backgroundImage" 
+            [alt]="informationCard.title"
+            class="img-fluid"
+          >
+        </div>
+      </div>
+      
+      <!-- Right Content Column -->
+      <div class="col-lg-4 col-md-12">
+        <div class="content-list right-content">
+          <div 
+            class="content-item" 
+            *ngFor="let item of getRightContentItems(); trackBy: trackByContentItem"
+          >
+            <div class="item-number">{{ item.number }}</div>
+            <div class="item-text">{{ item.text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

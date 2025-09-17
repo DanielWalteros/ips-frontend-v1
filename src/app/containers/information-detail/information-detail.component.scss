@@ -1,0 +1,38 @@
+// InformationDetailComponent - Main Container
+// Note: Most styles have been moved to individual section components
+// This file now contains only container-level styles
+
+// Loading Container
+.loading-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loading-spinner {
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
+      color: #0d7730;
+    }
+  }
+}
+
+// Information Detail Container
+.information-detail {
+  // Basic container for the information detail page
+  // Individual sections handle their own styling
+}
+
+// Utility responsive adjustments for the main container
+@media (max-width: 768px) {
+  .information-detail {
+    // Any global mobile adjustments if needed
+  }
+}
+
+@media (max-width: 576px) {
+  .information-detail {
+    // Any global small screen adjustments if needed
+  }
+}

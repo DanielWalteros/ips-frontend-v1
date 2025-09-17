@@ -1,0 +1,456 @@
+// Location Services Section
+.location-services {
+  background-color: #f8f9fa;
+  
+  .location-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--sb-accent-green);
+    letter-spacing: -0.5px;
+  }
+  
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+    min-height: 500px;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .service-header {
+      .service-icon {
+        img {
+          max-width: 80px;
+          max-height: 80px;
+          width: auto;
+          height: auto;
+        }
+        
+        i {
+          color: var(--sb-primary-blue);
+          
+          &.fa-plus-circle {
+            color: var(--sb-accent-green);
+          }
+        }
+      }
+      
+      .service-title {
+        font-weight: 600;
+        color: var(--sb-text-dark);
+        font-size: 1.25rem;
+        margin-bottom: 0;
+      }
+    }
+    
+    .service-list {
+      li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--sb-text-dark);
+        padding: 4px 0;
+        
+        i.fa-circle {
+          color: var(--sb-primary-blue);
+          opacity: 0.7;
+        }
+      }
+    }
+    
+    .new-services {
+      border-top: 2px solid #e9ecef;
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+      
+      h6 {
+        font-weight: 600;
+        color: var(--sb-primary-blue);
+        font-size: 1.1rem;
+      }
+    }
+    
+    .appointment-info {
+      p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--sb-text-dark);
+        
+        strong {
+          color: var(--sb-text-dark);
+          font-weight: 600;
+        }
+        
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    
+    .btn-success {
+      background-color: var(--sb-accent-green);
+      border-color: var(--sb-accent-green);
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+      }
+    }
+  }
+  
+  // Location Info Section
+  .location-map {
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      
+      iframe {
+        border-radius: 8px;
+      }
+    }
+  }
+  
+  .location-details {
+    .section-title {
+      font-weight: 600;
+      color: var(--sb-text-dark);
+      font-size: 1.25rem;
+      border-bottom: 2px solid var(--sb-primary-blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .location-info {
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        
+        strong {
+          color: var(--sb-text-dark);
+          font-weight: 600;
+        }
+      }
+    }
+    
+    .schedule-info {
+      .schedule-item {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        .schedule-label {
+          font-weight: 600;
+          color: var(--sb-text-dark);
+        }
+        
+        .schedule-time {
+          color: var(--sb-text-dark);
+          font-weight: 500;
+          
+          &.text-muted {
+            color: var(--sb-text-light) !important;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 991.98px) {
+  .location-services {
+    .location-title {
+      font-size: 1.85rem;
+      margin-bottom: 2rem;
+    }
+    
+    .service-card {
+      margin-bottom: 2rem;
+      min-height: auto;
+      
+      .service-header {
+        .service-icon {
+          img {
+            max-width: 70px;
+            max-height: 70px;
+          }
+          
+          i {
+            font-size: 2.5rem;
+            
+            &.fa-plus-circle {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+      
+      .service-list {
+        li {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .location-map {
+      margin-bottom: 2rem;
+      
+      .map-container {
+        iframe {
+          height: 250px;
+        }
+      }
+    }
+    
+    .location-details {
+      .section-title {
+        font-size: 1.1rem;
+      }
+      
+      .location-info p,
+      .schedule-info .schedule-item {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .location-services {
+    .location-title {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-card {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem !important;
+      
+      .service-header {
+        margin-bottom: 1.5rem;
+        
+        .service-icon {
+          margin-bottom: 1rem;
+          
+          img {
+            max-width: 60px;
+            max-height: 60px;
+          }
+          
+          i {
+            font-size: 2rem;
+            
+            &.fa-plus-circle {
+              font-size: 2rem;
+            }
+          }
+        }
+        
+        .service-title {
+          font-size: 1.1rem;
+        }
+      }
+      
+      .service-list {
+        li {
+          font-size: 0.85rem;
+          margin-bottom: 0.75rem;
+        }
+      }
+      
+      .new-services {
+        padding-top: 1rem;
+        margin-top: 1rem;
+        
+        h6 {
+          font-size: 1rem;
+        }
+      }
+      
+      .appointment-info {
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+      }
+      
+      .btn-success {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .location-map {
+      margin-bottom: 1.5rem;
+      
+      .map-container {
+        iframe {
+          height: 200px;
+        }
+      }
+    }
+    
+    .location-details {
+      .section-title {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .location-info p,
+      .schedule-info .schedule-item {
+        font-size: 0.85rem;
+      }
+      
+      .location-section {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .location-services {
+    .location-title {
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+      padding: 0 0.5rem;
+    }
+    
+    .service-card {
+      margin-bottom: 1.25rem;
+      padding: 1.25rem !important;
+      
+      .service-header {
+        margin-bottom: 1.25rem;
+        
+        .service-icon {
+          margin-bottom: 0.75rem;
+          
+          img {
+            max-width: 50px;
+            max-height: 50px;
+          }
+          
+          i {
+            font-size: 1.75rem;
+            
+            &.fa-plus-circle {
+              font-size: 1.75rem;
+            }
+          }
+        }
+        
+        .service-title {
+          font-size: 1rem;
+        }
+      }
+      
+      .service-list {
+        li {
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+        }
+      }
+      
+      .new-services {
+        padding-top: 0.75rem;
+        margin-top: 0.75rem;
+        
+        h6 {
+          font-size: 0.9rem;
+          margin-bottom: 0.75rem;
+        }
+      }
+      
+      .appointment-info {
+        p {
+          font-size: 0.85rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      .btn-success {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+    
+    .location-map {
+      margin-bottom: 1.25rem;
+      
+      .map-container {
+        iframe {
+          height: 180px;
+        }
+      }
+    }
+    
+    .location-details {
+      padding: 1.25rem !important;
+      
+      .section-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .location-info p,
+      .schedule-info .schedule-item {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      
+      .location-section {
+        margin-bottom: 1.25rem;
+      }
+      
+      .schedule-info .schedule-item {
+        padding: 0.4rem 0;
+        
+        .schedule-label,
+        .schedule-time {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Badge "Nuevo" para secciones nuevas
+.badge-new {
+  top: 10px;
+  right: 10px;
+  background-color: #FFC107; // Color amarillo como en la imagen
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 2;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

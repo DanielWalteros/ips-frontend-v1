@@ -1,0 +1,20 @@
+<!-- Sección de ubicaciones -->
+<section class="locations-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="locations-title mb-4">Conozca nuestras sedes de atención</h2>
+        <p class="locations-subtitle">
+          Nos especializamos en consulta externa y atención ambulatoria en Medicina General y más de 22 especialidades,
+          aquí:
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 col-md-12" *ngFor="let location of locations">
+        <app-location-card [location]="location"></app-location-card>
+      </div>
+    </div>
+  </div>
+</section>

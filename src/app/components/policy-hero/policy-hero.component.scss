@@ -1,0 +1,102 @@
+// Hero section styles
+.policy-hero {
+  position: relative;
+  min-height: 100vh; // Full viewport height for desktop
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // Key for parallax effect
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  overflow: hidden; // Prevents scrollbar issues with fixed background
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    padding: 3rem 0;
+    
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+      
+      @media (max-width: 576px) {
+        font-size: 1.75rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+      line-height: 1.4;
+      
+      @media (max-width: 768px) {
+        font-size: 1.125rem;
+      }
+      
+      @media (max-width: 576px) {
+        font-size: 1rem;
+      }
+    }
+    
+    .policy-meta {
+      margin-top: 2rem;
+      
+      .policy-code {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        
+        @media (max-width: 576px) {
+          font-size: 0.75rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    min-height: 60vh;
+    background-attachment: scroll; // Disable parallax on tablet for better performance
+    
+    .hero-content {
+      padding: 2rem 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    min-height: 50vh;
+    background-attachment: scroll; // Disable parallax on mobile for better performance
+    
+    .hero-content {
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+  }
+}

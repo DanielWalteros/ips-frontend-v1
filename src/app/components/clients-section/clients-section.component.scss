@@ -1,0 +1,70 @@
+// Sección de Nuestros Clientes
+.clients-section {
+  background-color: #ffffff;
+  
+  .clients-title {
+    color: #2c5234;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .logo-separator {
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(180deg, 
+      transparent 0%, 
+      #2c5234 20%, 
+      #2c5234 80%, 
+      transparent 100%);
+    margin: 0 auto;
+    opacity: 0.3;
+  }
+  
+  .logo-separator-mobile {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      #2c5234 20%, 
+      #2c5234 80%, 
+      transparent 100%);
+    margin: 2rem auto;
+    opacity: 0.3;
+  }
+}
+
+// Responsive adjustments for clients section
+@media (max-width: 991.98px) {
+  .clients-section {
+    .clients-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .clients-section {
+    .clients-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .logo-separator-mobile {
+      width: 40px;
+      margin: 1.5rem auto;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .clients-section {
+    .clients-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

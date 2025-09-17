@@ -1,0 +1,88 @@
+// Document Section - Default variant
+.document-section {
+  
+  .document-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(0, 144, 86);
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 991.98px) {
+      font-size: 2.2rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      font-size: 2rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .document-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    
+    @media (max-width: 767.98px) {
+      font-size: 1.1rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Financial Reports Section - Financial variant
+.financial-reports-section {
+  background-color: #f8f9fa;
+  
+  .financial-title {
+    color: #2c5234;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+    
+    @media (max-width: 991.98px) {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .financial-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 991.98px) {
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 0.9rem;
+    }
+  }
+}

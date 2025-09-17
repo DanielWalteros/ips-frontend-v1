@@ -1,0 +1,29 @@
+// PolicyDetailComponent styles
+// Note: Most styles have been moved to individual section components
+// This file now contains only container-level styles
+
+// Loading state
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+// Utility classes for the main container
+.container {
+  max-width: 1200px;
+}
+
+// Basic responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}

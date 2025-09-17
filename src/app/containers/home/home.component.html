@@ -1,0 +1,19 @@
+<!-- Página Principal de Salud Bolívar IPS -->
+
+<app-security-banner></app-security-banner>
+
+<app-welcome-section></app-welcome-section>
+
+<app-channels-section></app-channels-section>
+
+<app-locations-section [locations]="locations"></app-locations-section>
+
+<app-clients-section [clients]="clients"></app-clients-section>
+
+<!-- Financial Reports Section -->
+<app-document-section
+  [title]="financialTitle"
+  [subtitle]="financialSubtitle"
+  [documents]="financialDocuments"
+  variant="financial"
+></app-document-section>

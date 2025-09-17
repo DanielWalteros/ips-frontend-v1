@@ -1,0 +1,210 @@
+// Information Header Section
+.information-header {
+  background-color: #ffffff;
+
+  &.with-background {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    
+    .container {
+      .row {
+        justify-content: flex-start;
+      }
+    }
+    
+    .header-content {
+      text-align: left !important;
+      padding-left: 2rem;
+      max-width: 50%;
+      
+      .header-title {
+        color: #0d7730 !important;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-shadow: none;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        display: inline-block;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header-description {
+        color: #0d7730 !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        display: inline-block;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header-intro {
+        p {
+          color: #495057 !important;
+          font-size: 1rem;
+          line-height: 1.6;
+          background: rgba(255, 255, 255, 0.95);
+          padding: 1rem 1.5rem;
+          border-radius: 8px;
+          margin-bottom: 0.5rem;
+          display: block;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-shadow: none;
+        }
+      }
+    }
+  }
+
+  .header-content {
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0d7730;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      transition: all 0.3s ease;
+    }
+
+    .header-intro {
+      p {
+        font-size: 1rem;
+        color: #495057;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .information-header {
+    &.with-background {
+      min-height: 50vh;
+      background-attachment: scroll !important;
+      
+      .header-content {
+        padding-left: 1rem;
+        max-width: 70%;
+        
+        .header-title {
+          font-size: 2rem;
+          padding: 0.75rem 1.25rem;
+        }
+        
+        .header-description {
+          font-size: 1.1rem;
+          padding: 0.75rem 1.25rem;
+        }
+        
+        .header-intro {
+          p {
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+          }
+        }
+      }
+    }
+
+    .header-content {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .header-title {
+        font-size: 2rem;
+      }
+
+      .header-intro p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .header-image {
+      margin-bottom: 2rem;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .information-header {
+    &.with-background {
+      min-height: 40vh;
+      
+      .header-content {
+        padding-left: 0.5rem;
+        max-width: 85%;
+        
+        .header-title {
+          font-size: 1.75rem;
+          padding: 0.5rem 1rem;
+          margin-bottom: 1rem;
+        }
+        
+        .header-description {
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+        }
+        
+        .header-intro {
+          p {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+
+    .header-content {
+      .header-title {
+        font-size: 1.75rem;
+      }
+
+      .header-intro p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .header-image {
+      img {
+        border-radius: 6px;
+      }
+    }
+  }
+}

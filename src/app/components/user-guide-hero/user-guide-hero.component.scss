@@ -1,0 +1,94 @@
+// User Guide Hero Section
+.user-guide-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  // Overlay for better text readability
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+
+    .hero-text-box {
+      background: rgba(76, 76, 76, 0.9);
+      padding: 3rem 2.5rem;
+      border-radius: 0;
+      max-width: 500px;
+      
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .user-guide-hero {
+    min-height: 70vh;
+
+    .hero-content {
+      justify-content: center;
+      text-align: center;
+      min-height: 70vh;
+      padding: 1rem 0;
+
+      .hero-text-box {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+        margin: 0 1rem;
+        
+        .hero-title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .user-guide-hero {
+    min-height: 60vh;
+
+    .hero-content {
+      min-height: 60vh;
+
+      .hero-text-box {
+        padding: 1.5rem 1rem;
+        
+        .hero-title {
+          font-size: 1.5rem;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}

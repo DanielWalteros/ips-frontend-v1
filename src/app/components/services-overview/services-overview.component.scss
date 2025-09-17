@@ -1,0 +1,68 @@
+// Services Overview Section Styles
+.services-overview {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  
+  .overview-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--sb-text-dark);
+    letter-spacing: -0.5px;
+  }
+  
+  .overview-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--sb-text-light);
+    font-weight: 400;
+  }
+}
+
+// Responsive design
+@media (max-width: 991.98px) {
+  .services-overview {
+    .overview-title {
+      font-size: 1.85rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .overview-description {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-overview {
+    .overview-title {
+      font-size: 1.6rem;
+      line-height: 1.4;
+      margin-bottom: 1.25rem;
+    }
+    
+    .overview-description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services-overview {
+    .overview-title {
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      padding: 0 0.5rem;
+    }
+    
+    .overview-description {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      padding: 0 0.5rem;
+    }
+  }
+}

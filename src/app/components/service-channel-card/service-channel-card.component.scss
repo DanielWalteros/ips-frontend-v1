@@ -1,0 +1,128 @@
+.channel-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(44, 82, 52, 0.15);
+    border-color: #2c5234;
+  }
+  
+  .channel-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 60px;
+      height: auto;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .channel-title {
+    color: #2c5234;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .channel-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: #2c5234;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #1a3d20;
+        text-decoration: underline;
+      }
+      
+      &:focus {
+        outline: 2px solid #2c5234;
+        outline-offset: 2px;
+      }
+    }
+    
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+// Responsive adjustments for service channel card
+@media (max-width: 991.98px) {
+  .channel-card {
+    .channel-icon img {
+      max-width: 50px;
+    }
+    
+    .channel-title {
+      font-size: 1.1rem;
+    }
+    
+    .channel-description {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .channel-card {
+    padding: 1.5rem !important;
+    
+    .channel-icon {
+      margin-bottom: 1rem !important;
+      
+      img {
+        max-width: 45px;
+      }
+    }
+    
+    .channel-title {
+      font-size: 1rem;
+      margin-bottom: 0.75rem !important;
+    }
+    
+    .channel-description {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .channel-card {
+    padding: 1rem !important;
+    
+    .channel-icon {
+      margin-bottom: 0.75rem !important;
+      
+      img {
+        max-width: 40px;
+      }
+    }
+    
+    .channel-title {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .channel-description {
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<!-- Página Sobre Nuestra IPS - Salud Bolívar IPS -->
+
+<!-- Hero Section -->
+<app-hero-section></app-hero-section>
+
+<!-- About Us Section -->
+<app-about-us-section></app-about-us-section>
+
+<!-- Mission and Vision Section -->
+<app-mission-vision-section></app-mission-vision-section>
+
+<!-- Principles and Values Section -->
+<app-principles-values-section></app-principles-values-section>
+
+<!-- Institutional Policies Section -->
+<app-institutional-policies-section></app-institutional-policies-section>
+
+<!-- Ruta hacia la Transparencia Section -->
+<app-document-section
+  [title]="transparencyTitle"
+  [subtitle]="transparencySubtitle"
+  [documents]="transparencyDocuments"
+></app-document-section>
+
+<!-- Boletín Epidemiológico Section -->
+<app-document-section
+  [title]="epidemiologicalTitle"
+  [subtitle]="epidemiologicalSubtitle"
+  [documents]="epidemiologicalDocuments"
+  [allowHtmlInSubtitle]="true"
+></app-document-section>
+
+<!-- Financial Reports Section -->
+<app-document-section
+  [title]="financialTitle"
+  [subtitle]="financialSubtitle"
+  [documents]="financialDocuments"
+  variant="financial"
+></app-document-section>

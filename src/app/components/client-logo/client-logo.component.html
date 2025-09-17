@@ -1,0 +1,10 @@
+<div class="client-logo">
+  <a [href]="client.websiteUrl" 
+     [target]="client.websiteUrl ? '_blank' : '_self'"
+     [attr.aria-label]="'Visitar sitio web de ' + client.name">
+    <img
+      [src]="client.logoUrl"
+      [alt]="client.altText" 
+      class="img-fluid client-logo-img">
+  </a>
+</div>

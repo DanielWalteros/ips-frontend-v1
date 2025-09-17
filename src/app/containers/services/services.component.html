@@ -1,0 +1,17 @@
+<!-- Página de Servicios Médicos - Salud Bolívar IPS -->
+
+<!-- Hero Section Component -->
+<app-services-hero></app-services-hero>
+
+<!-- Services Overview Component -->
+<app-services-overview></app-services-overview>
+
+<!-- Dynamic Location Details - All Locations (mantenemos este componente como está) -->
+<app-location-detail 
+  *ngFor="let location of locations; trackBy: trackByLocationId" 
+  [location]="location" 
+  [showTitle]="true">
+</app-location-detail>
+
+<!-- Vaccination Section Component -->
+<app-vaccination-section></app-vaccination-section>

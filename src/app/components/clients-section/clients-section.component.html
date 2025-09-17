@@ -1,0 +1,25 @@
+<!-- Sección de Nuestros Clientes -->
+<section class="clients-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="clients-title">Nuestros clientes</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5 col-md-6 text-center">
+        <app-client-logo [client]="clients[0]"></app-client-logo>
+      </div>
+
+      <div class="col-lg-2 col-md-12 text-center">
+        <div class="logo-separator d-none d-md-block"></div>
+        <div class="logo-separator-mobile d-md-none my-4"></div>
+      </div>
+
+      <div class="col-lg-5 col-md-6 text-center">
+        <app-client-logo [client]="clients[1]"></app-client-logo>
+      </div>
+    </div>
+  </div>
+</section>
