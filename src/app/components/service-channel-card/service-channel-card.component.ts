@@ -18,7 +18,7 @@ export class ServiceChannelCardComponent {
     }
 
     const target = this.channel.linkTarget === '_blank' ? ' target="_blank"' : '';
-    const linkHtml = `<a href="${this.channel.linkUrl}" class="text-decoration-none"${target}><strong>${this.channel.linkText}</strong></a>`;
+    const linkHtml = `<a href="${this.channel.linkUrl}" ${target}>${this.channel.linkText}</a>`;
     
     // Replace placeholder in description with actual link
     return this.channel.description.replace('{{LINK}}', linkHtml);

@@ -19,7 +19,7 @@ describe('ServiceChannelCardComponent', () => {
     iconDataSrcDesktop1x: 'https://example.com/whatsapp-desktop-1x.png',
     iconDataSrcDesktop2x: 'https://example.com/whatsapp-desktop-2x.png',
     linkUrl: 'https://api.whatsapp.com/send?phone=573223322322',
-    linkText: '322 332 2322',
+    linkText: '<strong>322 332 2322</strong>',
     linkTarget: '_blank',
     linkType: 'whatsapp'
   };

@@ -11,7 +11,7 @@ export class ServiceChannelsService {
     {
       id: 'telephone',
       title: 'Línea Telefónica # 322',
-      description: 'Desde su celular marque <strong>{{LINK}}</strong>, opciones 1-1-4-1.',
+      description: 'Desde su celular marque {{LINK}}, opciones 1-1-4-1.',
       iconUrl: 'https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/b68541b6-assesor-callcenter_101j01j01g01j001000028.png',
       iconSrcSet: 'https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/b68541b6-assesor-callcenter_101j01j01g01j001000028.png 1x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/b68541b6-assesor-callcenter_103203202w032002000028.png 2x, https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/b68541b6-assesor-callcenter_104l04l04c04l003000028.png 3x',
       iconDataSrcDesktop1x: 'https://d9hhrg4mnvzow.cloudfront.net/www.saludbolivarips.com/b68541b6-assesor-callcenter_101j01j01g01j001000028.png',

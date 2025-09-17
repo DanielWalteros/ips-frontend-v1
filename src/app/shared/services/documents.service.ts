@@ -80,14 +80,14 @@ export class DocumentsService {
     // Documentos de Manejo de Datos y Privacidad
     {
       id: 'politicas-proteccion-datos',
-      title: 'Políticas para Protección de datos personales - Salud Bolívar IPS',
+      title: 'Políticas para Protección de datos personales • Salud Bolívar IPS',
       downloadUrl: 'https://d9b6rardqz97a.cloudfront.net/wp-content/uploads/2021/04/09151806/MANUAL-POLITICAS-PARA-LA-PROTECCION-DATOS-PERSONALES.pdf',
       type: 'privacy',
       isAvailable: true
     },
     {
       id: 'aviso-privacidad',
-      title: 'Aviso de Privacidad - Salud Bolívar IPS',
+      title: 'Aviso de Privacidad • Salud Bolívar IPS',
       downloadUrl: 'https://d9b6rardqz97a.cloudfront.net/wp-content/uploads/2021/04/09151816/AVISO-DE-PRIVACIDAD.pdf',
       type: 'privacy',
       isAvailable: true

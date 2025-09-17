@@ -1,5 +1,5 @@
 .channel-card {
-  background: #ffffff;
+  background: #fafafa;
   border: 1px solid #e9ecef;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -29,35 +29,36 @@
   }
   
   .channel-title {
-    color: #2c5234;
+    color: #1b1b1b;
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
   
   .channel-description {
-    color: #6c757d;
+    color: #1b1b1b;
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 0.5rem;
     
-    a {
-      color: #2c5234;
-      text-decoration: none;
+    // Use ::ng-deep to style dynamically generated HTML content
+    ::ng-deep a {
+      color: #009056 !important;
+      text-decoration: underline;
       transition: color 0.3s ease;
       
       &:hover {
-        color: #1a3d20;
+        color: #009056;
         text-decoration: underline;
       }
       
       &:focus {
-        outline: 2px solid #2c5234;
+        outline: 2px solid #009056;
         outline-offset: 2px;
       }
     }
     
-    strong {
+    ::ng-deep strong {
       font-weight: 600;
     }
   }
