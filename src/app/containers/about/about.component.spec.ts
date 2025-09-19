@@ -123,13 +123,13 @@ describe('AboutComponent', () => {
     const principlesSection = compiled.querySelector('.principles-values-section');
     expect(principlesSection).toBeTruthy();
     
+    // No main title in new design
     const principlesTitle = compiled.querySelector('.principles-title');
-    expect(principlesTitle).toBeTruthy();
-    expect(principlesTitle?.textContent?.trim()).toBe('Principios y valores');
+    expect(principlesTitle).toBeFalsy();
     
-    // Check for value items
-    const valueItems = compiled.querySelectorAll('.value-item');
-    expect(valueItems.length).toBe(5); // Respeto, Honestidad, Entusiasmo, Equidad, Disciplina
+    // Check for value cards
+    const valueCards = compiled.querySelectorAll('.value-card');
+    expect(valueCards.length).toBe(5); // Respeto, Honestidad, Entusiasmo, Equidad, Disciplina
     
     // Check value titles
     const valueTitles = compiled.querySelectorAll('.value-title');
@@ -191,7 +191,7 @@ describe('AboutComponent', () => {
     const h3Elements = compiled.querySelectorAll('h3');
     
     expect(h1).toBeTruthy();
-    expect(h2Elements.length).toBe(7); // about-title, section-title, principles-title, policies-title, document-title (x3)
+    expect(h2Elements.length).toBe(6); // about-title, section-title, policies-title, document-title (x3) - no principles-title
     expect(h3Elements.length).toBeGreaterThanOrEqual(11); // mission, vision, 5 values titles, 4 policy titles (document cards now use h6)
   });
 
@@ -298,7 +298,7 @@ describe('AboutComponent', () => {
     // Check for secondary headings
     const h2Elements = compiled.querySelectorAll('h2');
     const h3Elements = compiled.querySelectorAll('h3');
-    expect(h2Elements.length).toBe(7); // about-title, section-title, principles-title, policies-title, document-title (x3)
+    expect(h2Elements.length).toBe(6); // about-title, section-title, policies-title, document-title (x3) - no principles-title
     expect(h3Elements.length).toBeGreaterThanOrEqual(11); // mission, vision, 5 values titles, 4 policy titles (document cards now use h6)
     
     // Check text content is meaningful
@@ -308,7 +308,7 @@ describe('AboutComponent', () => {
     expect(textContent).toContain('Salud Bolívar IPS');
     expect(textContent).toContain('Nuestra Misión');
     expect(textContent).toContain('Nuestra Visión');
-    expect(textContent).toContain('Principios y valores');
+    // Removed "Principios y valores" title in new design
     expect(textContent).toContain('Respeto');
     expect(textContent).toContain('Equidad');
     expect(textContent).toContain('Políticas institucionales');

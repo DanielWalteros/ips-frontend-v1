@@ -29,21 +29,25 @@ describe('PrinciplesValuesSectionComponent', () => {
     const container = compiled.querySelector('.container');
     expect(container).toBeTruthy();
 
-    const valuesContainers = compiled.querySelectorAll('.values-container');
-    expect(valuesContainers.length).toBe(2); // Two columns
+    const valueCards = compiled.querySelectorAll('.value-card');
+    expect(valueCards.length).toBe(5); // Five value cards
   });
 
-  it('should display principles title', () => {
+  it('should display value cards without main title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
+    // No main title in the new design
     const principlesTitle = compiled.querySelector('.principles-title');
-    expect(principlesTitle).toBeTruthy();
-    expect(principlesTitle?.textContent?.trim()).toBe('Principios y valores');
+    expect(principlesTitle).toBeFalsy();
+    
+    // Should have 5 value cards instead
+    const valueCards = compiled.querySelectorAll('.value-card');
+    expect(valueCards.length).toBe(5);
   });
 
   it('should display all five corporate values', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const valueItems = compiled.querySelectorAll('.value-item');
-    expect(valueItems.length).toBe(5); // Respeto, Honestidad, Entusiasmo, Equidad, Disciplina
+    const valueCards = compiled.querySelectorAll('.value-card');
+    expect(valueCards.length).toBe(5); // Respeto, Honestidad, Entusiasmo, Equidad, Disciplina
 
     // Check for specific value titles
     const valueTitles = compiled.querySelectorAll('.value-title');
@@ -63,7 +67,7 @@ describe('PrinciplesValuesSectionComponent', () => {
 
     // Check that each subtitle contains the key phrase
     valueSubtitles.forEach(subtitle => {
-      expect(subtitle.textContent).toContain('Enriquecemos la Vida con integridad porque:');
+      expect(subtitle.textContent).toContain('Enriquecemos la Vida con Integridad porque');
     });
 
     const valueDescriptions = compiled.querySelectorAll('.value-description');
@@ -76,21 +80,33 @@ describe('PrinciplesValuesSectionComponent', () => {
     });
   });
 
-  it('should display corporate values image', () => {
+  it('should display value cards with correct classes', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const valuesImage = compiled.querySelector('.values-image');
-    expect(valuesImage).toBeTruthy();
-    expect(valuesImage?.getAttribute('alt')).toBe('Valores corporativos');
-    expect(valuesImage?.getAttribute('src')).toContain('mesa-de-trabajo');
+    
+    // Check specific value card classes
+    const respectoCard = compiled.querySelector('.value-card.respeto');
+    expect(respectoCard).toBeTruthy();
+    
+    const equidadCard = compiled.querySelector('.value-card.equidad');
+    expect(equidadCard).toBeTruthy();
+    
+    const honestidadCard = compiled.querySelector('.value-card.honestidad');
+    expect(honestidadCard).toBeTruthy();
+    
+    const disciplinaCard = compiled.querySelector('.value-card.disciplina');
+    expect(disciplinaCard).toBeTruthy();
+    
+    const entusiastmoCard = compiled.querySelector('.value-card.entusiasmo');
+    expect(entusiastmoCard).toBeTruthy();
   });
 
   it('should have responsive layout classes', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const leftColumn = compiled.querySelector('.col-lg-6');
-    expect(leftColumn).toBeTruthy();
-
-    const rightColumns = compiled.querySelectorAll('.col-lg-6');
-    expect(rightColumns.length).toBe(2); // Two responsive columns
+    const lg6Columns = compiled.querySelectorAll('.col-lg-6');
+    expect(lg6Columns.length).toBe(2); // Two lg-6 columns in first row
+    
+    const lg4Columns = compiled.querySelectorAll('.col-lg-4');
+    expect(lg4Columns.length).toBe(3); // Three lg-4 columns in second row
   });
 
   it('should have proper CSS classes for styling', () => {
@@ -98,50 +114,49 @@ describe('PrinciplesValuesSectionComponent', () => {
     const principlesSection = compiled.querySelector('.principles-values-section');
     expect(principlesSection?.classList.contains('py-5')).toBeTruthy();
 
-    const principlesTitle = compiled.querySelector('.principles-title');
-    expect(principlesTitle?.classList.contains('text-center')).toBeTruthy();
-    expect(principlesTitle?.classList.contains('mb-5')).toBeTruthy();
-
-    const valuesImage = compiled.querySelector('.values-image');
-    expect(valuesImage?.classList.contains('img-fluid')).toBeTruthy();
+    // Check value cards have proper structure
+    const valueCards = compiled.querySelectorAll('.value-card');
+    expect(valueCards.length).toBe(5);
+    
+    valueCards.forEach(card => {
+      expect(card.classList.contains('value-card')).toBeTruthy();
+    });
   });
 
   it('should be accessible', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     
-    // Check for proper heading hierarchy
-    const h2 = compiled.querySelector('h2');
-    expect(h2).toBeTruthy();
-    expect(h2?.textContent?.trim()).toBe('Principios y valores');
-    
+    // Check for proper heading hierarchy (no h2 in new design)
     const h3Elements = compiled.querySelectorAll('h3');
     expect(h3Elements.length).toBe(5); // Five value titles
-    
+
     // Check for semantic section structure
     const section = compiled.querySelector('section');
     expect(section).toBeTruthy();
+
+    // Check for descriptive content
+    const lists = compiled.querySelectorAll('.value-description');
+    expect(lists.length).toBe(5); // Five value descriptions
     
-    // Check for proper list structure
-    const unorderedLists = compiled.querySelectorAll('ul.value-description');
-    expect(unorderedLists.length).toBe(5);
-    
-    // Check image alt text
-    const image = compiled.querySelector('img');
-    expect(image?.getAttribute('alt')).toBeTruthy();
+    // Check each list has proper list items
+    lists.forEach(list => {
+      const listItems = list.querySelectorAll('li');
+      expect(listItems.length).toBeGreaterThan(0);
+    });
   });
 
   it('should have meaningful content for each value', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     
     // Check specific content for some values
-    const respectSection = Array.from(compiled.querySelectorAll('.value-item'))
+    const respectSection = Array.from(compiled.querySelectorAll('.value-card'))
       .find(item => item.querySelector('.value-title')?.textContent?.includes('Respeto'));
     expect(respectSection).toBeTruthy();
     
     const respectDescription = respectSection?.querySelector('.value-description');
     expect(respectDescription?.textContent).toContain('dignidad humana');
     
-    const honestySection = Array.from(compiled.querySelectorAll('.value-item'))
+    const honestySection = Array.from(compiled.querySelectorAll('.value-card'))
       .find(item => item.querySelector('.value-title')?.textContent?.includes('Honestidad'));
     expect(honestySection).toBeTruthy();
     

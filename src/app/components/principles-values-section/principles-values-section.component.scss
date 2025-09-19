@@ -1,90 +1,102 @@
+// Principles and Values Section - Grid Layout con colores específicos
 .principles-values-section {
   background-color: #ffffff;
+  padding: 2rem 0;
   
-  .principles-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgb(0, 144, 86); // Green color as seen in the image
-    margin-bottom: 3rem;
-    
-    @media (max-width: 991.98px) {
-      font-size: 2.25rem;
-    }
+  // Tarjetas de valores con colores específicos
+  .value-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     
     @media (max-width: 767.98px) {
-      font-size: 2rem;
+      padding: 1.25rem;
     }
     
     @media (max-width: 575.98px) {
-      font-size: 1.75rem;
+      padding: 1rem;
     }
   }
   
-  .values-container {
-    padding: 1rem 0;
-    
-    @media (max-width: 991.98px) {
-      padding: 0.5rem 0;
-    }
+  // Colores específicos para cada valor según la imagen
+  .value-card.respeto .value-title {
+    color: #8B5CF6; // Morado como en la imagen
   }
   
-  .value-item {
-    margin-bottom: 2rem;
-    
+  .value-card.equidad .value-title {
+    color: #FF8C00; // Naranja como en la imagen
+  }
+  
+  .value-card.honestidad .value-title {
+    color: #0066CC; // Azul como en la imagen
+  }
+  
+  .value-card.disciplina .value-title {
+    color: #DC2626; // Rojo como en la imagen
+  }
+  
+  .value-card.entusiasmo .value-title {
+    color: #10B981; // Verde como en la imagen
+  }
+  
+  // Títulos de cada valor
     .value-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: rgb(0, 144, 86);
+    font-size: 1.25rem;
+    font-weight: 700;
       margin-bottom: 0.75rem;
+    line-height: 1.3;
       
       @media (max-width: 991.98px) {
-        font-size: 1.3rem;
+      font-size: 1.2rem;
       }
       
       @media (max-width: 767.98px) {
-        font-size: 1.25rem;
+      font-size: 1.15rem;
       }
       
       @media (max-width: 575.98px) {
-        font-size: 1.2rem;
+      font-size: 1.1rem;
       }
     }
     
+  // Subtítulo "Enriquecemos la Vida con Integridad porque"
     .value-subtitle {
-      font-size: 1rem;
-      color: #333333;
-      margin-bottom: 0.5rem;
-      line-height: 1.5;
-      
-      strong {
-        color: #333333;
-      }
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
       
       @media (max-width: 767.98px) {
-        font-size: 0.95rem;
+      font-size: 0.85rem;
       }
       
       @media (max-width: 575.98px) {
-        font-size: 0.9rem;
+      font-size: 0.8rem;
       }
     }
     
+  // Lista de descripciones con viñetas
     .value-description {
       list-style: none;
       padding: 0;
       margin: 0;
+    flex: 1;
       
       li {
         position: relative;
-        padding-left: 1.2rem;
+      padding-left: 1rem;
         margin-bottom: 0.5rem;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #666666;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #1b1b1b;
         
         &:before {
           content: "•";
-          color: rgb(0, 144, 86);
+        color: #1b1b1b;
           font-weight: bold;
           position: absolute;
           left: 0;
@@ -92,70 +104,58 @@
         }
         
         @media (max-width: 767.98px) {
-          font-size: 0.9rem;
-          padding-left: 1rem;
+        font-size: 0.8rem;
+        padding-left: 0.9rem;
         }
         
         @media (max-width: 575.98px) {
-          font-size: 0.85rem;
-        }
+        font-size: 0.75rem;
+        padding-left: 0.8rem;
       }
     }
   }
   
-  .values-image-container {
-    padding: 1rem 0;
-    
-    .values-image {
-      max-width: 250px;
-      height: auto;
-      border-radius: 8px;
-      
-      @media (max-width: 991.98px) {
-        max-width: 200px;
-      }
-      
+  // Espaciado entre filas
+  .row {
       @media (max-width: 767.98px) {
-        max-width: 180px;
-        margin-top: 2rem;
-      }
-      
-      @media (max-width: 575.98px) {
-        max-width: 150px;
-      }
+      margin-bottom: 1rem;
     }
   }
   
-  // Responsive adjustments
+  // Responsive adjustments para columnas
   @media (max-width: 991.98px) {
-    .row {
-      margin: 0 -1rem;
+    .col-lg-4 {
+      margin-bottom: 2rem;
       
-      .col-lg-6 {
-        padding: 0 1rem;
-        margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
   
   @media (max-width: 767.98px) {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     
-    .col-lg-6 {
-      &:first-child {
-        margin-bottom: 3rem;
+    .col-lg-6,
+    .col-lg-4 {
+      margin-bottom: 2rem;
+      
+      &:last-child {
+        margin-bottom: 0;
       }
-    }
-    
-    .value-item {
-      margin-bottom: 2.5rem;
-      text-align: left;
     }
   }
   
   @media (max-width: 575.98px) {
-    .values-image-container {
-      margin-top: 1rem;
+    padding: 1rem 0;
+    
+    .col-lg-6,
+    .col-lg-4 {
+      margin-bottom: 1.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
