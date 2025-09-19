@@ -2,7 +2,7 @@
 .navbar {
   background-color: #ffffff !important;
   z-index: 1050;
-  padding: 1rem 0;
+  padding: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e9ecef;
   
@@ -14,7 +14,7 @@
     margin-right: 2rem;
     
     .logo {
-      max-height: 50px;
+      height: 73px;
       width: auto;
       object-fit: contain;
     }

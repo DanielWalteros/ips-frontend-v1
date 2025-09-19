@@ -102,3 +102,114 @@ html, body {
 .bg-sb-light {
   background-color: var(--sb-gray-light) !important;
 }
+
+// ========================================
+// CUSTOM CONTAINER WIDTH RESTRICTIONS
+// ========================================
+// Controla el ancho máximo del contenido en pantallas grandes
+// para mantener una óptima legibilidad y experiencia de usuario
+
+
+
+@media (min-width: 1285px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 960px;
+  }
+}
+
+// ========================================
+// RESPONSIVE CONTENT OPTIMIZATION
+// ========================================
+// Asegura que el contenido mantenga proporciones óptimas
+// en diferentes resoluciones de pantalla
+
+@media (min-width: 960px) and (max-width: 1284px) {
+  // Pantallas medianas-grandes: contenido más amplio
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  // Pantallas muy grandes: contenido más centrado y compacto
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// ========================================
+// CONTAINER OVERRIDE SAFETY
+// ========================================
+// Previene que otros frameworks o librerías sobrescriban nuestras reglas
+
+.container {
+  &[class*="container"] {
+
+    
+    @media (min-width: 1285px) {
+      max-width: 960px !important;
+    }
+  }
+}
+
+// ========================================
+// CONTENT SECTION OPTIMIZATION
+// ========================================
+// Asegura que secciones específicas también respeten los límites
+
+section,
+.section,
+.content-section {
+  .container {
+    @media (min-width: 960px) {
+      max-width: 1185px;
+    }
+    
+    @media (min-width: 1285px) {
+      max-width: 1140px;
+    }
+  }
+}
+
+// ========================================
+// UTILITY CLASSES FOR CUSTOM WIDTHS
+// ========================================
+// Clases de utilidad para casos especiales
+
+.container-custom {
+  @media (min-width: 960px) {
+    max-width: 1185px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 1285px) {
+    max-width: 1140px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.container-wide {
+  @media (min-width: 960px) {
+    max-width: 1185px;
+    margin: 0 auto;
+  }
+}
+
+.container-narrow {
+  @media (min-width: 1285px) {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}

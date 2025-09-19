@@ -1,122 +1,181 @@
+// Mission and Vision Section - Diseño con íconos sobrepuestos EXACTO a la imagen
 .mission-vision-section {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
+  padding: 3rem 0;
   
+  @media (max-width: 767.98px) {
+    padding: 2rem 0;
+  }
+  
+  // Section Title - Green color matching brand
   .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: rgb(0, 144, 86);
+    color: #009056; // Brand green
+    text-align: center;
     margin-bottom: 3rem;
     
     @media (max-width: 991.98px) {
       font-size: 2.25rem;
+      margin-bottom: 2.5rem;
     }
     
     @media (max-width: 767.98px) {
       font-size: 2rem;
+      margin-bottom: 2rem;
     }
     
     @media (max-width: 575.98px) {
       font-size: 1.75rem;
-    }
-  }
-  
-  .mission-vision-card {
-    background: white;
-    border: 1px solid #e9ecef;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-align: center;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-      border-color: white;
-    }
-    
-    .icon-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80px;
-      height: 80px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background: linear-gradient(135deg, white 0%, white 100%);
-      
-      @media (max-width: 767.98px) {
-        width: 70px;
-        height: 70px;
-      }
-    }
-    
-    .mission-icon,
-    .vision-icon {
-      font-size: 2.5rem;
-      color: white;
-      
-      @media (max-width: 767.98px) {
-        font-size: 2rem;
-      }
-    }
-    
-    .card-title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: #333333;
       margin-bottom: 1.5rem;
-      
-      @media (max-width: 991.98px) {
-        font-size: 1.5rem;
-      }
-      
-      @media (max-width: 767.98px) {
-        font-size: 1.4rem;
-      }
-      
-      @media (max-width: 575.98px) {
-        font-size: 1.3rem;
-      }
+    }
+  }
+  
+  // Container para cada misión/visión
+  .mission-vision-container {
+    text-align: center; // Centrar todo el contenido
+  }
+  
+  // Títulos FUERA de las tarjetas
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333333;
+    text-align: center; // Centrado
+    margin-bottom: 0;
+    
+    @media (max-width: 991.98px) {
+      font-size: 1.3rem;
     }
     
-    .card-text {
+    @media (max-width: 767.98px) {
+      font-size: 1.2rem;
+    }
+    
+    @media (max-width: 575.98px) {
       font-size: 1.1rem;
-      line-height: 1.7;
-      color: #6c757d;
-      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+  }
+  
+  // Wrapper para posicionamiento relativo
+  .card-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  // Ícono SOBREPUESTO en la tarjeta
+  .icon-overlay {
+    position: absolute;
+    top: -30px; // Sobresale arriba de la tarjeta
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    
+    &.left {
+      left: 18%;
+    }
+    &.right {
+      left: 85%;
+    }
+    @media (max-width: 575.98px) {
+      top: -25px;
+      padding: 8px;
+    }
+  }
+  
+  // Icons Styling - Tamaño correcto para sobreponer
+  .mission-icon,
+  .vision-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    
+    @media (max-width: 767.98px) {
+      width: 50px;
+      height: 50px;
+    }
+    
+    @media (max-width: 575.98px) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  
+  // Tarjeta con SOLO el texto (sin título ni ícono)
+  .mission-vision-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 3rem 2rem 2rem 2rem; // Padding extra arriba por el ícono sobrepuesto
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 6px; // Espacio para el ícono sobrepuesto
+    
+    @media (max-width: 767.98px) {
+      padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+      margin-top: 25px;
+    }
+    
+    @media (max-width: 575.98px) {
+      padding: 2rem 1rem 1rem 1rem;
+      margin-top: 25px;
+    }
+  }
+  
+  // Descripción del texto dentro de la tarjeta
+  .card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666666;
+    text-align: left;
+    margin: 0;
+    
+    @media (max-width: 991.98px) {
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      font-size: 0.9rem;
+      text-align: center; // Centrado en tablet
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 0.85rem;
+      text-align: center; // Centrado en móvil
+    }
+  }
+  
+  // Responsive Grid Adjustments
+  .col-lg-6 {
+    @media (max-width: 767.98px) {
+      margin-bottom: 3rem; // Más espacio entre elementos en móvil
       
-      @media (max-width: 991.98px) {
-        font-size: 1.05rem;
-      }
-      
-      @media (max-width: 767.98px) {
-        font-size: 1rem;
-        text-align: center;
-      }
-      
-      @media (max-width: 575.98px) {
-        font-size: 0.95rem;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
   
-  .row.g-4 {
+  // Container optimization
+  .container {
     @media (max-width: 991.98px) {
-      margin: 0 -1rem;
-      
-      .col-lg-6 {
-        padding: 0 1rem;
-        margin-bottom: 2rem;
-      }
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
     
     @media (max-width: 575.98px) {
-      margin: 0 -0.5rem;
-      
-      .col-lg-6 {
-        padding: 0 0.5rem;
-        margin-bottom: 1.5rem;
-      }
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }

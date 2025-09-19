@@ -105,7 +105,7 @@ describe('AboutComponent', () => {
   it('should display mission and vision images', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     
-    const iconContainers = compiled.querySelectorAll('.icon-container img');
+    const iconContainers = compiled.querySelectorAll('.icon-overlay img');
     expect(iconContainers.length).toBe(2);
     
     // Check mission image

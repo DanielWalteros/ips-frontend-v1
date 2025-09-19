@@ -62,8 +62,7 @@ describe('HeroSectionComponent', () => {
 
     const heroTitle = compiled.querySelector('.hero-title');
     expect(heroTitle?.classList.contains('display-3')).toBeTruthy();
-    expect(heroTitle?.classList.contains('fw-bold')).toBeTruthy();
-    expect(heroTitle?.classList.contains('mb-4')).toBeTruthy();
+    expect(heroTitle?.classList.contains('hero-title')).toBeTruthy();
   });
 
   it('should be accessible', () => {

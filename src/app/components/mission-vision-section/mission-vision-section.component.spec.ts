@@ -55,7 +55,7 @@ describe('MissionVisionSectionComponent', () => {
 
   it('should display mission content', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const cardTexts = compiled.querySelectorAll('.card-text');
+    const cardTexts = compiled.querySelectorAll('.card-description');
     
     const missionText = Array.from(cardTexts).find(text => 
       text.textContent?.includes('Enriquecemos la vida de nuestros usuarios')
@@ -67,7 +67,7 @@ describe('MissionVisionSectionComponent', () => {
 
   it('should display vision content', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const cardTexts = compiled.querySelectorAll('.card-text');
+    const cardTexts = compiled.querySelectorAll('.card-description');
     
     const visionText = Array.from(cardTexts).find(text => 
       text.textContent?.includes('Para el 2026')
@@ -80,10 +80,10 @@ describe('MissionVisionSectionComponent', () => {
 
   it('should display mission and vision icons', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const iconContainers = compiled.querySelectorAll('.icon-container');
-    expect(iconContainers.length).toBe(2); // Mission and Vision icons
+    const iconOverlays = compiled.querySelectorAll('.icon-overlay');
+    expect(iconOverlays.length).toBe(2); // Mission and Vision icons
 
-    const images = compiled.querySelectorAll('.icon-container img');
+    const images = compiled.querySelectorAll('.icon-overlay img');
     expect(images.length).toBe(2);
     
     // Check for mission icon
@@ -101,7 +101,7 @@ describe('MissionVisionSectionComponent', () => {
 
   it('should have responsive layout classes', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const cardContainer = compiled.querySelector('.row.g-4');
+    const cardContainer = compiled.querySelector('.row.justify-content-center');
     expect(cardContainer).toBeTruthy();
 
     const columnElements = compiled.querySelectorAll('.col-lg-6');
@@ -114,14 +114,20 @@ describe('MissionVisionSectionComponent', () => {
     expect(missionVisionSection?.classList.contains('py-5')).toBeTruthy();
 
     const sectionTitle = compiled.querySelector('.section-title');
-    expect(sectionTitle?.classList.contains('text-center')).toBeTruthy();
     expect(sectionTitle?.classList.contains('mb-5')).toBeTruthy();
 
     const cards = compiled.querySelectorAll('.mission-vision-card');
-    cards.forEach(card => {
-      expect(card.classList.contains('h-100')).toBeTruthy();
-      expect(card.classList.contains('p-4')).toBeTruthy();
-    });
+    expect(cards.length).toBe(2);
+    
+    // Check for overlay structure
+    const containers = compiled.querySelectorAll('.mission-vision-container');
+    expect(containers.length).toBe(2);
+    
+    const cardWrappers = compiled.querySelectorAll('.card-wrapper');
+    expect(cardWrappers.length).toBe(2);
+    
+    const iconOverlays = compiled.querySelectorAll('.icon-overlay');
+    expect(iconOverlays.length).toBe(2);
   });
 
   it('should be accessible', () => {
@@ -140,18 +146,22 @@ describe('MissionVisionSectionComponent', () => {
     expect(section).toBeTruthy();
     
     // Check for descriptive content
-    const paragraphs = compiled.querySelectorAll('p.card-text');
+    const paragraphs = compiled.querySelectorAll('p.card-description');
     expect(paragraphs.length).toBe(2);
     paragraphs.forEach(paragraph => {
       expect(paragraph.textContent?.length).toBeGreaterThan(50);
     });
+    
+    // Check that titles are outside cards
+    const titles = compiled.querySelectorAll('.mission-vision-container .card-title');
+    expect(titles.length).toBe(2);
   });
 
   it('should have meaningful and detailed content', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     
     // Check mission content quality
-    const cardTexts = compiled.querySelectorAll('.card-text');
+    const cardTexts = compiled.querySelectorAll('.card-description');
     expect(cardTexts.length).toBe(2);
     
     cardTexts.forEach(text => {
